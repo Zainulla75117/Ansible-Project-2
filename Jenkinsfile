@@ -16,8 +16,8 @@ stages{
     }
     stage('RunTerraform'){
         steps{
-            sh "terraform -chdir=aws_ec2 init"
-            sh "terraform -chdir=aws_ec2 apply --auto-approve"
+            sh "terraform -chdir=aws_ec2.tf init"
+            sh "terraform -chdir=aws_ec2.tf apply --auto-approve"
         }
     }
     stage('ExeAnsiblePlaybooks'){
