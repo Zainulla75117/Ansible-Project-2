@@ -16,8 +16,8 @@ stages{
     }
     stage('RunTerraform'){
         steps{
-            sh "terraform -chdir=terraformscript init"
-            sh "terraform -chdir=terraformscript apply --auto-approve"
+            sh "terraform  -chdir=terraformscript init"
+            sh "terraform  -chdir=terraformscript apply --auto-approve"
         }
     }
     stage('ExeAnsiblePlaybooks'){
