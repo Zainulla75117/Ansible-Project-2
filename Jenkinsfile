@@ -4,9 +4,9 @@ agent{
     label 'ansiblenode'
 }
 
-environment{
-    AWS_EC2=credentials('AWSEC2PEM')
-}
+ environment {
+   AWS_EC2=credentials('AWSEC2PEM') 
+  }
 
 stages{
     stage('CheckOutCode'){
