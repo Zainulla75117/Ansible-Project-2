@@ -5,7 +5,7 @@ agent{
 }
 
  environment {
-   AWS_EC2=credentials('AWSEC2PEM') 
+   AWS_EC2=credentials('Awsec2') 
   }
 
 stages{
