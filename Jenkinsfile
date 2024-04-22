@@ -11,7 +11,7 @@ environment{
 stages{
     stage('CheckOutCode'){
         steps{
-            git credentialsId: '5bea97a5-1d05-46ad-bfc8-6e055e1d9ef8', url: 'https://github.com/Zainulla75117/Ansible-Project-1.git'
+            git credentialsId: '5bea97a5-1d05-46ad-bfc8-6e055e1d9ef8', url: 'https://github.com/Zainulla75117/Ansible-Project-2.git'
         }
     }
     stage('RunTerraform'){
