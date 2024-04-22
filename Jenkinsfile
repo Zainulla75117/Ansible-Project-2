@@ -22,7 +22,8 @@ stages{
     }
     stage('ExeAnsiblePlaybooks'){
         steps{
-            sh "ansible-playbook -i Inventory/aws_ec2.yaml --private-key=$AWS_EC2 Playbooks/pingServer.yaml --ssh-common-args='-o StrictHostKeyChecking=no'"
+          sh "ansible-playbook -i Inventory/aws_ec2.yaml --private-key=$AWS_EC2 Playbooks/pingServer.yaml --ssh-common-args='-o StrictHostKeyChecking=no'"
+
         }
     }
 }//stages End
