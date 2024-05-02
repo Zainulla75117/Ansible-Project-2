@@ -14,15 +14,15 @@ stages{
             git credentialsId: '5bea97a5-1d05-46ad-bfc8-6e055e1d9ef8', url: 'https://github.com/Zainulla75117/Ansible-Project-2.git'
         }
     }
-    stage('RunTerraform'){
+    /*stage('RunTerraform'){
         steps{
             sh "terraform  -chdir=terraformscript init"
             sh "terraform  -chdir=terraformscript apply --auto-approve"
         }
-    }
+    }*/
     stage('ExeAnsiblePlaybooks'){
         steps{
-          sh "ansible-playbook -i Inventory/aws_ec2.yaml --private-key=$AWS_EC2 Playbooks/pingServer.yaml --ssh-common-args='-o StrictHostKeyChecking=no'"
+          sh "ansible-playbook -i Inventory/aws_ec2.yaml --private-key=$AWS_EC2 Playbooks/installSonarQubeServer.yaml --ssh-common-args='-o StrictHostKeyChecking=no'"
 
         }
     }
