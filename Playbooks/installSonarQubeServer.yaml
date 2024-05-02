@@ -17,7 +17,7 @@
   - name: Add Sonar User
     user:
      name: sonar 
-     group: sonar
+     #group: sonar
 
   - name: Unzipping SonarQube File
     shell:
