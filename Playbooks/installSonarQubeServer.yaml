@@ -17,7 +17,7 @@
   - name: Copying Files to /opt Directory
     copy:
      src: /home/ec2-user/sonarqube-10.5.1.90531.zip
-     dest: ~/opt
+     dest: /opt
 
   - name: Add Sonar User
     user:
@@ -27,5 +27,5 @@
   - name: Unzipping SonarQube File
     shell:
      cmd: unzip sonarqube-10.5.1.90531.zip
-     chdir: ~/opt
+     chdir: /opt
 ...
